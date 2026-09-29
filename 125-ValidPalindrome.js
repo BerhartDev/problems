@@ -53,3 +53,8 @@ var isPalindrome = function(s) {
     }
     return true;
 };
+
+var isPalindrome2 = function(s) {
+    const clean = s.toLocaleLowerCase().replace(/[^a-z0-9]/g, '');
+    return clean === clean.split('').reverse().join('')
+}
